@@ -9,7 +9,7 @@ export default function Projects() {
       title: "RLine",
       description:
         "A full-stack social media platform where users can create posts, interact with content, and engage with the community. Built with modern web technologies and responsive design principles.",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/rline.png",
       technologies: ["React", "Node.js", "Express.js", "MongoDB", "JavaScript", "CSS3", "Responsive Design"],
       features: [
         "User authentication and profiles",
