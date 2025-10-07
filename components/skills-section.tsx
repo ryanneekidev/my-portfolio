@@ -1,13 +1,29 @@
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Code2, Database, Globe, Smartphone, Server, GitBranch, Palette, Cloud } from "lucide-react"
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Code2,
+  Database,
+  Globe,
+  Smartphone,
+  Server,
+  GitBranch,
+  Palette,
+  Cloud,
+} from "lucide-react";
 
 export default function Skills() {
   const skillCategories = [
     {
       title: "Frontend",
       icon: <Globe className="h-5 w-5" />,
-      skills: ["React", "Next.js", "Tailwind CSS", "HTML5", "CSS3", "JavaScript"],
+      skills: [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+      ],
     },
     {
       title: "Backend",
@@ -22,23 +38,38 @@ export default function Skills() {
     {
       title: "Tools & Workflow",
       icon: <GitBranch className="h-5 w-5" />,
-      skills: ["Git", "GitHub", "VS Code", "Figma", "Postman", "Jasmine", "Webpack", "Vite"],
+      skills: [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Figma",
+        "Postman",
+        "Jasmine",
+        "Webpack",
+        "Vite",
+      ],
     },
     {
       title: "Design",
       icon: <Palette className="h-5 w-5" />,
       skills: ["Responsive Design", "Prototyping", "Wireframing"],
     },
-  ]
+  ];
 
   return (
-    <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
+    <section
+      id="skills"
+      className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex items-center justify-center"
+    >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Technologies I Work With</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              Technologies I Work With
+            </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              A comprehensive overview of the technologies, frameworks, and tools I use to build modern applications and software.
+              A comprehensive overview of the technologies, frameworks, and
+              tools I use to build modern applications and software.
             </p>
           </div>
         </div>
@@ -76,9 +107,15 @@ export default function Skills() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { name: "Problem Solving", icon: <Code2 className="h-4 w-4" /> },
-              { name: "Database Design", icon: <Database className="h-4 w-4" /> },
+              {
+                name: "Database Design",
+                icon: <Database className="h-4 w-4" />,
+              },
               { name: "API Development", icon: <Server className="h-4 w-4" /> },
-              { name: "Version Control", icon: <GitBranch className="h-4 w-4" /> },
+              {
+                name: "Version Control",
+                icon: <GitBranch className="h-4 w-4" />,
+              },
             ].map((competency, index) => (
               <div
                 key={index}
@@ -92,5 +129,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  )
+  );
 }

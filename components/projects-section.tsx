@@ -1,7 +1,24 @@
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { ExternalLink, Github, Users, Smartphone, Code, TreePine, Hash, LinkIcon, Search } from "lucide-react"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  ExternalLink,
+  Github,
+  Users,
+  Smartphone,
+  Code,
+  TreePine,
+  Hash,
+  LinkIcon,
+  Search,
+} from "lucide-react";
 
 export default function Projects() {
   const projects = [
@@ -10,7 +27,15 @@ export default function Projects() {
       description:
         "A full-stack social media platform where users can create posts, interact with content, and engage with the community. Built with modern web technologies and responsive design principles.",
       image: "/rline.png",
-      technologies: ["React", "Node.js", "Express.js", "MongoDB", "JavaScript", "CSS3", "Responsive Design"],
+      technologies: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JavaScript",
+        "CSS3",
+        "Responsive Design",
+      ],
       features: [
         "User authentication and profiles",
         "Real-time post creation and interaction",
@@ -22,7 +47,7 @@ export default function Projects() {
       category: "Full Stack",
       icon: <Users className="h-5 w-5" />,
     },
-  ]
+  ];
 
   const dsaProjects = [
     {
@@ -61,17 +86,22 @@ export default function Projects() {
       githubUrl: "https://github.com/ryanneekidev/linked-list-js",
       icon: <Search className="h-5 w-5" />,
     },
-  ]
+  ];
 
   return (
-    <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
+    <section
+      id="projects"
+      className="w-full py-12 md:py-24 lg:py-32 flex items-center justify-center"
+    >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Featured Projects</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              Featured Projects
+            </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              A showcase of my development work, from full-stack applications to data structures and algorithms
-              implementations.
+              A showcase of my development work, from full-stack applications to
+              data structures and algorithms implementations.
             </p>
           </div>
         </div>
@@ -92,10 +122,14 @@ export default function Projects() {
                   <CardHeader>
                     <div className="flex items-center space-x-2">
                       {project.icon}
-                      <CardTitle className="text-2xl">{project.title}</CardTitle>
+                      <CardTitle className="text-2xl">
+                        {project.title}
+                      </CardTitle>
                       <Badge variant="outline">{project.category}</Badge>
                     </div>
-                    <CardDescription className="text-base">{project.description}</CardDescription>
+                    <CardDescription className="text-base">
+                      {project.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
@@ -116,7 +150,11 @@ export default function Projects() {
                       <h4 className="font-semibold mb-2">Technologies Used</h4>
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech, techIndex) => (
-                          <Badge key={techIndex} variant="secondary" className="text-xs">
+                          <Badge
+                            key={techIndex}
+                            variant="secondary"
+                            className="text-xs"
+                          >
                             {tech}
                           </Badge>
                         ))}
@@ -125,13 +163,21 @@ export default function Projects() {
                   </CardContent>
                   <CardFooter className="flex gap-2 mt-6">
                     <Button asChild size="sm">
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Github className="h-4 w-4 mr-2" />
                         View Code
                       </a>
                     </Button>
                     <Button asChild variant="outline" size="sm">
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
                       </a>
@@ -151,7 +197,8 @@ export default function Projects() {
               Data Structures & Algorithms
             </h3>
             <p className="text-muted-foreground">
-              Implementations of fundamental computer science concepts and algorithms in JavaScript
+              Implementations of fundamental computer science concepts and
+              algorithms in JavaScript
             </p>
           </div>
 
@@ -167,10 +214,16 @@ export default function Projects() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold mb-2 text-sm">Algorithms Implemented</h4>
+                    <h4 className="font-semibold mb-2 text-sm">
+                      Algorithms Implemented
+                    </h4>
                     <div className="flex flex-wrap gap-1">
                       {project.algorithms.map((algorithm, algIndex) => (
-                        <Badge key={algIndex} variant="outline" className="text-xs">
+                        <Badge
+                          key={algIndex}
+                          variant="outline"
+                          className="text-xs"
+                        >
                           {algorithm}
                         </Badge>
                       ))}
@@ -180,7 +233,11 @@ export default function Projects() {
                     <h4 className="font-semibold mb-2 text-sm">Technologies</h4>
                     <div className="flex flex-wrap gap-1">
                       {project.technologies.map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="secondary" className="text-xs">
+                        <Badge
+                          key={techIndex}
+                          variant="secondary"
+                          className="text-xs"
+                        >
                           {tech}
                         </Badge>
                       ))}
@@ -189,7 +246,11 @@ export default function Projects() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild size="sm" className="w-full">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Github className="h-4 w-4 mr-2" />
                       View Implementation
                     </a>
@@ -202,9 +263,15 @@ export default function Projects() {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">Want to see more of my work?</p>
+          <p className="text-muted-foreground mb-4">
+            Want to see more of my work?
+          </p>
           <Button asChild size="lg">
-            <a href="https://github.com/ryanneekidev/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/ryanneekidev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Github className="h-5 w-5 mr-2" />
               View All Projects on GitHub
             </a>
@@ -212,5 +279,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
