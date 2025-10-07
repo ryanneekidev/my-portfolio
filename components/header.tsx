@@ -73,7 +73,12 @@ export const HeroHeader = () => {
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
                   {menuItems.map((item, index) => (
-                    <li key={index}>
+                    <li
+                      key={index}
+                      onClick={() => {
+                        setMenuState(!menuState);
+                      }}
+                    >
                       <Link
                         href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
