@@ -34,9 +34,9 @@ export const HeroHeader = () => {
           "fixed z-20 w-full transition-all duration-150 bg-background/50 border-b border-black/10 backdrop-blur-sm"
         )}
       >
-        <div className="mx-auto max-w-5xl px-6">
+        <div className="mx-auto justify-between max-w-5xl px-6">
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0">
-            <div className="flex w-full justify-between gap-6 lg:w-auto">
+            <div className="flex w-full justify-between lg:w-full">
               <Link
                 href="/"
                 aria-label="home"
@@ -54,7 +54,7 @@ export const HeroHeader = () => {
                 <X className="in-data-[state=true]:rotate-0 in-data-[state=true]:scale-100 in-data-[state=true]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
               </button>
 
-              <div className="m-auto hidden size-fit lg:block">
+              <div className="hidden justify-self-end size-fit lg:block">
                 <ul className="flex gap-1">
                   {menuItems.map((item, index) => (
                     <li key={index}>
