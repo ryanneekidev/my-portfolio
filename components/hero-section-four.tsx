@@ -19,7 +19,7 @@ export default function HeroSection() {
                 </h1>
 
                 <p className="text-muted-foreground mx-auto my-6 max-w-2xl text-balance text-xl">
-                  Hello, I`&apos;`m Rayan Mamhoud. Dedicated to continuous
+                  Hello, I&apos;m Rayan Mamhoud. Dedicated to continuous
                   learning and innovation in all fields of tech.
                 </p>
 
